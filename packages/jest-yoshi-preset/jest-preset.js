@@ -36,7 +36,7 @@ module.exports = {
       })
       .map(project => {
         const [setupTestsPath] = globby.sync(
-          `test/setup.${project.displayName}.(ts|js){,x}`,
+          `__tests__/${project.displayName}-setup.(ts|js){,x}`,
         );
 
         const setupTestsFile =
